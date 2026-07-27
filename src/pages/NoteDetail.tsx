@@ -7,6 +7,16 @@ export default function NoteDetail() {
   const { id } = useParams();
 
   const note = notesList.find(note => note.id === id);
+
+  if (!note) {
+    return (
+      <div className="note_detail">
+        <p>Note not found!</p>
+        <button onClick={() => navigate('/notes')}>Back to Notes</button>
+      </div>
+    );
+  }
+
   return (
     <div className="note_detail">
       <div className="title">{note.title}</div>
