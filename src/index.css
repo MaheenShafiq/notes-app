@@ -1,0 +1,95 @@
+/* ============================================================
+   Notes App — "Midnight Study" dark theme
+   Deep aubergine surface, warm gold lamplight accent.
+   ============================================================ */
+
+   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
+
+   :root {
+     --bg: #15121c;
+     --bg-glow: radial-gradient(circle at 15% -10%, rgba(232, 163, 77, 0.07), transparent 40%),
+                radial-gradient(circle at 100% 10%, rgba(127, 191, 168, 0.05), transparent 45%);
+     --card: #1e1a28;
+     --card-hover: #241f2f;
+     --border: #2f2a3b;
+     --border-soft: #262032;
+     --ink: #f1ece4;
+     --muted: #9c93a8;
+     --muted-dim: #6f6680;
+     --gold: #e8a34d;
+     --gold-soft: rgba(232, 163, 77, 0.14);
+     --gold-glow: rgba(232, 163, 77, 0.25);
+     --sage: #7fbfa8;
+     --sage-soft: rgba(127, 191, 168, 0.14);
+     --danger: #e06b5f;
+     --danger-soft: rgba(224, 107, 95, 0.14);
+   
+     --font-display: 'Fraunces', Georgia, serif;
+     --font-body: 'Inter', -apple-system, sans-serif;
+   
+     --radius: 16px;
+     --radius-sm: 10px;
+     --shadow: 0 1px 0 rgba(255, 255, 255, 0.02) inset, 0 6px 20px rgba(0, 0, 0, 0.35);
+     --shadow-hover: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 10px 32px rgba(0, 0, 0, 0.45),
+                     0 0 0 1px rgba(232, 163, 77, 0.18), 0 0 32px rgba(232, 163, 77, 0.08);
+   }
+   
+   * {
+     box-sizing: border-box;
+   }
+   
+   body {
+     margin: 0;
+     background: var(--bg-glow), var(--bg);
+     color: var(--ink);
+     font-family: var(--font-body);
+     -webkit-font-smoothing: antialiased;
+   }
+   
+   .container {
+     max-width: 680px;
+     margin: 0 auto;
+     padding: 56px 24px 96px;
+     min-height: 100vh;
+   }
+
+   .margin-top{
+ margin: 20px;
+   }
+   
+   button:focus-visible,
+   input:focus-visible,
+   h2:focus-visible {
+     outline: 2px solid var(--gold);
+     outline-offset: 2px;
+   }
+   
+   /* ---------------- Buttons (shared) ---------------- */
+   
+   button {
+     font-family: var(--font-body);
+     font-size: 0.9rem;
+     font-weight: 600;
+     border: none;
+     border-radius: var(--radius-sm);
+     padding: 11px 20px;
+     cursor: pointer;
+     transition: transform 0.12s ease, box-shadow 0.15s ease, background 0.15s ease;
+     background: var(--card);
+     color: var(--ink);
+     border: 1px solid var(--border);
+   }
+   
+   button:hover {
+     transform: translateY(-1px);
+   }
+   
+   button:active {
+     transform: translateY(0);
+   }
+   
+   @media (prefers-reduced-motion: reduce) {
+     button { transition: none; }
+     button:hover { transform: none; }
+   }
+   
